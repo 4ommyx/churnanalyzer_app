@@ -25,6 +25,6 @@ In this mode, users can
 
 **ChurnAnalyzer App** is designed for convenience and accuracy in data analysis. 🎯
 ## Additional Resources
-- **Documentation**: [Churnanalyzer app using logistic regression](https://medium.com/@4ommyx/churnanalyzer-app-using-logistic-regression-80531e5acd84)  
-- **App Link**: [Churnanalyzer App](https://churnanalyzerapp-4ommyx.streamlit.app/)
+- **Documentation** : [Churnanalyzer app using logistic regression](https://medium.com/@4ommyx/churnanalyzer-app-using-logistic-regression-80531e5acd84)  
+- **App Link** : [Churnanalyzer App](https://churnanalyzerapp-4ommyx.streamlit.app/)
 
