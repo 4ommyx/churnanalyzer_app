@@ -23,4 +23,4 @@ In this mode, users can:
 - Automatically analyzes data and generates PDF reports.  
 - Provides **visualizations** to identify trends and insights.  
 
-**Channel Analyzer App** is designed for convenience and accuracy in data analysis. 🎯
+**ChurnAnalyzer App** is designed for convenience and accuracy in data analysis. 🎯
