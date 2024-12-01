@@ -7,10 +7,8 @@ In this mode, the model allows users to:
 
 - **Generate a dataset** by specifying the desired number of records.  
 - After generating the dataset, users can **visualize the data** as needed.  
-- Users can click the **Predict** button to analyze trends and assess the accuracy of the model.  
-
----
-
+- Users can click the **Predict** button to analyze trends and assess the accuracy of the model.
+  
 ## 2. Import dataset to Predict  
 In this mode, users can:
 
@@ -18,8 +16,6 @@ In this mode, users can:
 - Once the file is uploaded, the system will analyze and generate a **PDF report**.  
 - The report will indicate whether the **customer belongs to class 0 or 1** as predicted by the model.  
 - Additionally, the app provides **basic data visualizations** to help interpret the results.  
-
----
 
 ### Features:
 - Supports **CSV file uploads**.  
