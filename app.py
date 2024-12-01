@@ -16,7 +16,7 @@ if "random_data" not in st.session_state:
 
 # Function to generate random dataset
 def random_dataset(count):
-    st.session_state.random_data = full_df.sample(n=count, random_state=np.random.randint(1, 1000))
+    st.session_state.random_data = full_df.sample(n=count)
 
 # Function for prediction
 def predict(threshold):
@@ -65,13 +65,9 @@ def predict(threshold):
 
         # Display graphs in Streamlit
         st.pyplot(fig)
-    
-col1, col2 = st.columns(2)
-
-# Sidebar for navigation
 
 # Toggle Button
-page = col1.toggle(f"Switch Mode")
+page = st.toggle(f"Switch Mode")
 
 if page:
     # Model analysis page
@@ -79,7 +75,7 @@ if page:
     st.subheader("Control the process with the buttons below")
 
     # Random dataset input and button
-    count = st.number_input('Number of Samples', value=10, step=1)
+    count = st.number_input('Number of Samples', value=10, step=1, min_value=1, max_value=int(full_df.shape[0]))
     if st.button("Generate Random Dataset"):
         random_dataset(count)
         st.success(f"Random dataset of {count} samples generated successfully!")
@@ -95,14 +91,14 @@ if page:
 
     # Predict button and prediction
     if st.session_state.random_data is not None:
-        threshold = st.slider('Select Threshold', min_value=0, max_value=100)
+        threshold = st.slider('Select Threshold', min_value=0, max_value=100, value=50)
         if st.button("Predict"):
             predict(threshold)
 
 else:
     # Hello World Page
     st.title("Upload file to predict")
-    st.write("Welcome! This is a simple 'Hello World' demonstration.")
+    st.write("Welcome! This is a Churnanalyzer app.")
 
     # File upload section
     uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])
@@ -161,6 +157,5 @@ else:
                 st.write("Churn Percentage \n by Contract Length")
                 contract_churn = calculate_churn_percentage(df, 'Contract Length')
                 st.bar_chart(contract_churn.set_index('Contract Length')['Churn Percentage'])
-
     else:
         st.warning("Please upload a CSV file to start.")
