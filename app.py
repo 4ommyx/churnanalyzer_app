@@ -10,6 +10,12 @@ import joblib
 full_df = joblib.load('full_df_half.joblib')  # Load DataFrame from saved file
 model = joblib.load('churn_analyzer_model.joblib')
 
+st.set_page_config(
+    page_title="Churnanalyzer App",
+    page_icon="📉",
+    layout="centered",
+)
+
 # Create session state for storing random data
 if "random_data" not in st.session_state:
     st.session_state.random_data = None
